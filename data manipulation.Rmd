@@ -1,0 +1,105 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#install.packages('countrycode')
+#install.packages('Rtools')
+#install.packages('RWeka')
+```
+
+
+```{r}
+library(RWeka)
+library(fpp3)
+library(countrycode)
+library(stringr)
+```
+
+```{r}
+#df <- read.arff("assignment_data.arff")
+```
+
+
+```{r}
+#write.csv(df, file = 'assignment_data.csv')
+```
+
+
+# Convert to arff file cleaned and vectorized data
+
+# Scenerio 1 
+
+Overall rating
+```{r}
+overall <- read.csv('Preprocessed_file/Scenerio_1_overall.csv')
+write.arff(overall, file = "Scenerio 1/Overall.arff")
+```
+
+Cleanliness
+```{r}
+cleanliness <- read.csv('Preprocessed_file/Scenerio_1_cleanliness.csv')
+write.arff(cleanliness, file = "Scenerio 1/Cleanliness.arff")
+```
+
+Location
+```{r}
+location <- read.csv('Preprocessed_file/Scenerio_1_location.csv')
+write.arff(location, file = "Scenerio 1/Location.arff")
+```
+
+Rooms
+```{r}
+rooms <- read.csv('Preprocessed_file/Scenerio_1_rooms.csv')
+write.arff(rooms, file = "Scenerio 1/Rooms.arff")
+```
+
+Service
+```{r}
+service <- read.csv('Preprocessed_file/Scenerio_1_service.csv')
+write.arff(service, file = "Scenerio 1/Service.arff")
+```
+
+
+Sleep
+```{r}
+sleep <- read.csv('Preprocessed_file/Scenerio_1_sleep.csv')
+write.arff(sleep, file = "Scenerio 1/Sleep.arff")
+```
+
+
+Value
+
+```{r}
+value <- read.csv('Preprocessed_file/Scenerio_1_value.csv')
+write.arff(value, file = "Scenerio 1/Value.arff")
+```
+
+
+
+#Scenerio 2
+
+```{r}
+Scenerio_2 <- read.csv('Preprocessed_file/Scenerio_2.csv')
+write.arff(Scenerio_2, file = "Scenerio 2/num_helpful_vote.arff")
+```
+
+#Scenerio 3
+```{r}
+Scenerio_3 <- read.csv('Preprocessed_file/Scenerio_3.csv')
+write.arff(Scenerio_3, file = "Scenerio 3/Author_num_cities.arff")
+```
+
+
+#Scenerio 4
+```{r}
+Scenerio_4 <- read.csv('Preprocessed_file/Scenerio_4.csv')
+write.arff(Scenerio_4, file = "Scenerio 4/Author_num_helpful_votes.arff")
+```
+
+
+
+
+
+
